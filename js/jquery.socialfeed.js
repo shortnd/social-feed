@@ -316,6 +316,7 @@ if (typeof Object.create !== 'function') {
                             var username = account.substr(1);
                             Feed.facebook.utility.getUserId(username, function(userdata) {
                                 if (userdata.id !== '') {
+                                    // TODO: UPDATE THIS TO NEWEST VERSION
                                     request_url = Feed.facebook.graph + 'v2.12/' + userdata.id + '/posts'+ fields + limit + query_extention;
                                     proceed(request_url);
                                 }
